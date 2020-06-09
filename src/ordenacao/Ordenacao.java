@@ -36,9 +36,9 @@ public class Ordenacao {
 		int[] tamanhosDeInput = new int[] { 100, 1000, 10000 };
 
 		for (int tamanho : tamanhosDeInput) {
-			ordemCrescente = vertorEmOrdemCrescente(tamanho);
-			ordemDecrescente = vertorEmOrdemDecrescente(tamanho);
-			ordemAleatoria = vertorEmDesordem(tamanho);
+			ordemCrescente = gerarVetorEmOrdemCrescente(tamanho);
+			ordemDecrescente = gerarVetorEmOrdemDecrescente(tamanho);
+			ordemAleatoria = gerarVetorAleatorio(tamanho);
 
 			// Feito com três 'for' separados para manter a sequência desejada no output
 			for (MetodoDeOrdenacao metodo : metodosOrdenacao) {
@@ -63,24 +63,24 @@ public class Ordenacao {
 
 	}
 
-	public static int[] vertorEmOrdemCrescente(int tamanho) {
+	public static int[] gerarVetorEmOrdemCrescente(int tamanho) {
 		int[] vetor = new int[tamanho];
-		for (int i = 0; i < vetor.length; i++) {
+		for (int i = 0; i < vetor.length; i++)
 			vetor[i] = i + 1;
-		}
+		
 		return vetor;
 	}
 
-	public static int[] vertorEmOrdemDecrescente(int tamanho) {
+	public static int[] gerarVetorEmOrdemDecrescente(int tamanho) {
 		int[] vetor = new int[tamanho];
-		for (int i = 0; i < vetor.length; i++) {
+		for (int i = 0; i < vetor.length; i++)
 			vetor[i] = tamanho - i;
-		}
+		
 		return vetor;
 	}
 
-	public static int[] vertorEmDesordem(int tamanho) {
-		int[] vetor = vertorEmOrdemCrescente(tamanho);
+	public static int[] gerarVetorAleatorio(int tamanho) {
+		int[] vetor = gerarVetorEmOrdemCrescente(tamanho);
 		Random random = new Random();
 		for (int i = 0; i < vetor.length; i++) {
 			int j = random.nextInt(vetor.length);
