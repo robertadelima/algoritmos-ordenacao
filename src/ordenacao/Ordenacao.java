@@ -24,7 +24,7 @@ public class Ordenacao {
         try {
 			FileWriter csvWriter = new FileWriter("output.csv", false);
 			csvWriter.write("Tamanho do input, Ordenação do input, Método, Comparações, Movimentações,"
-					+ " Repetições, Tempo Médio(nanosseg)");
+					+ " Repetições, Tempo Médio(ns)");
 			csvWriter.flush();
 			csvWriter.close();
 		} catch (IOException e) {
@@ -40,8 +40,7 @@ public class Ordenacao {
         	ordemDecrescente = vertorEmOrdemDecrescente(tamanho);
         	ordemAleatoria = vertorEmDesordem(tamanho);
         	
-        	//Dessa maneira para obter todos os métodos com input crescente, seguido de todos os métodos por decrescente
-        	//e todos os métodos com input aleatório
+        	//Feito com três 'for' separados para manter a sequência desejada no output
         	for(MetodoDeOrdenacao metodo : metodosOrdenacao) {
         		 metodo.setVetor(ordemCrescente.clone()); 
         		 metodo.sort(repeticoes); 
@@ -60,6 +59,7 @@ public class Ordenacao {
        		 	metodo.writeToFile("Aleatoria", metodo.getClass().getSimpleName());
         	}
         }
+        System.out.println("Finished writing. Check the output.csv file!");
         
     }
     

@@ -74,6 +74,7 @@ public abstract class MetodoDeOrdenacao {
 			csvWriter.append(metodo + "," + comparacoes + ",");
 			csvWriter.append(movimentacoes + "," + tempo.length + ",");
 			csvWriter.append(Long.toString(tempoMedio));
+			csvWriter.flush();
 			csvWriter.close();
 		} catch (IOException e) {
 			e.printStackTrace();
