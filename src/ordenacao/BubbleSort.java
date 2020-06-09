@@ -36,10 +36,10 @@ public class BubbleSort extends MetodoDeOrdenacao {
         movimentacoes++;
     }
 
-    @Override
-    public void print() {
-        System.out.print("Método: BubbleSort    | ");
-        super.print();
-    }
+//    @Override
+//    public void print() {
+//        System.out.print("Método: BubbleSort    | ");
+//        super.print();
+//    }
 
 }

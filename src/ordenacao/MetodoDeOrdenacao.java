@@ -1,5 +1,8 @@
 package ordenacao;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public abstract class MetodoDeOrdenacao {
 
     protected int[] vetor;
@@ -47,6 +50,7 @@ public abstract class MetodoDeOrdenacao {
     }
     
     public void print() {
+    	System.out.print("Método: " + this.getClass().getSimpleName() + "    | ");
         System.out.print("Comparações: " + comparacoes + " | ");
         System.out.print("Movimentações: " + movimentacoes + " | ");
         long total = 0;  
@@ -60,5 +64,7 @@ public abstract class MetodoDeOrdenacao {
         long media = total / (long)qtd;
         System.out.println("Tempo: " + media + " nanossegundos");
     }
+    
+
 
 }

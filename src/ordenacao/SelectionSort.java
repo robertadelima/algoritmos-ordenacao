@@ -46,10 +46,10 @@ public class SelectionSort extends MetodoDeOrdenacao {
         movimentacoes++;
     }
 
-    @Override
-    public void print() {
-        System.out.print("Método: SelectionSort | ");
-        super.print();
-    }
+//    @Override
+//    public void print() {
+//        System.out.print("Método: SelectionSort | ");
+//        super.print();
+//    }
 
 }

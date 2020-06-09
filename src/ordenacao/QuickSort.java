@@ -54,10 +54,10 @@ public class QuickSort extends MetodoDeOrdenacao {
         movimentacoes++;
     }
 
-    @Override
-    public void print() {
-        System.out.print("Método: QuickSort     | ");
-        super.print();
-    }
+//    @Override
+//    public void print() {
+//        System.out.print("Método: QuickSort     | ");
+//        super.print();
+//    }
 
 }

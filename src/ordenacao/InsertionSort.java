@@ -41,10 +41,10 @@ public class InsertionSort extends MetodoDeOrdenacao {
         }
     }
 
-    @Override
-    public void print() {
-        System.out.print("Método: InsertionSort | ");
-        super.print();
-    }
+//    @Override
+//    public void print() {
+//        System.out.print("Método: InsertionSort | ");
+//        super.print();
+//    }
 
 }

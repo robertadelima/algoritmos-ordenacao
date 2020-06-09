@@ -49,10 +49,10 @@ public class MergeSort extends MetodoDeOrdenacao {
         }
     }
 
-    @Override
-    public void print() {
-        System.out.print("Método: MergeSort     | ");
-        super.print();
-    }
+//    @Override
+//    public void print() {
+//        System.out.print("Método: MergeSort     | ");
+//        super.print();
+//    }
 
 }
