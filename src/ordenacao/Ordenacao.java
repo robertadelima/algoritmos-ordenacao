@@ -24,7 +24,7 @@ public class Ordenacao {
         try {
 			FileWriter csvWriter = new FileWriter("output.csv", false);
 			csvWriter.write("Tamanho do input, Ordenação do input, Método, Comparações, Movimentações,"
-					+ " Repetições, Tempo Médio(ns)");
+					+ " Execuções, Tempo Médio(ns)");
 			csvWriter.flush();
 			csvWriter.close();
 		} catch (IOException e) {
